@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <input type="text" name="newItem" placeholder="Add New Item..." class="form-control" [(ngModel)] = "value">
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="button" id="newItem" [disabled] = "value ?false : true" (click) = "onAddingTodo()">Save</button>
+      </span>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-xs-8">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todos; let i = index" (click) = "onSubmit(i)" [ngClass] = "{'strike': todo.strike}" >{{todo.name}}<span class="badge" style="cursor:pointer;" (click)="onTodoRemoval(todo)">X</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
