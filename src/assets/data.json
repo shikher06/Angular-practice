@@ -8,5 +8,10 @@
         "name": "Pay the Bills",
         "strike": false,
         "id": 1
+    },
+    {
+        "name": "Order Food",
+        "strike": false,
+        "id": 2
     }
 ]

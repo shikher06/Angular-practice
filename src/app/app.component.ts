@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
 
   onTodoRemoval(todo){
     for (let index = 0; index < this.todos.length; index++) {
-      if (todo.name = this.todos[index].name) {
+      if (todo.name == this.todos[index].name) {
         this.todos.splice(index, 1);
       }
     }
