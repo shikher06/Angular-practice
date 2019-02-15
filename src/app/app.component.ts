@@ -18,10 +18,10 @@ export class AppComponent implements OnInit{
   ngOnInit(){
     this.readJson.getJsonItems()
     .subscribe((response: Response) => {
-      console.log(response.json());
+     // console.log(response.json());
       this.todos = response.json();
     })
-    console.log(this.value);
+    //console.log(this.value);
   }
 
   onTodoRemoval(todo){
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit{
       // if (todo.name == this.todos[index].name) {
       //   console.log("hello");
         this.todos[index].strike = true;
-        console.log(this.todos);
+        //console.log(this.todos);
       // }
     // }
   }
